@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.12;
 
-import { Script } from "forge-std/Script.sol";
+import "forge-std/Script.sol";
 import "../src/WalletFactory.sol";
 import { IEntryPoint } from "account-abstraction/interfaces/IEntryPoint.sol";
 

@@ -32,7 +32,7 @@ contract WalletFactory {
   function getAddress(address[] memory owners, uint256 salt) public view returns (address) {
     bytes memory walletInit = abi.encodeCall(Wallet.initialize, owners);
     bytes memory proxyConstructor = abi.encode(address(walletImplementation), walletInit);
-    bytes memory bytecode = abi.encodePacked(type(ERC1967Proxy).creationcode, proxyConstructor);
+    bytes memory bytecode = abi.encodePacked(type(ERC1967Proxy).creationCode, proxyConstructor);
     
     bytes32 bytecodeHash = keccak256(bytecode);
 
