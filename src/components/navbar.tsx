@@ -10,12 +10,10 @@ export default function Navbar() {
         <Link href="/" className="hover:underline">
           Home
         </Link>
-        {/* <Link href="/create-wallet" className="hover:underline">
-              Create New Wallet
-            </Link> 
-        */}
+        <Link href="/create-wallet" className="hover:underline">
+          Create New Wallet
+        </Link>
       </div>
-
       <ConnectButton />
     </div>
   );
