@@ -5,6 +5,7 @@ import { parseEther } from "ethers/lib/utils";
 import { useState } from "react";
 import { useAccount, useWalletClient } from "wagmi";
 import getUserOpHash from "@/utils/getUserOpHash";
+import TransactionsList from "@/components/transactionList";
 
 export default function WalletPage({
   params: { walletAddress },
@@ -130,6 +131,9 @@ export default function WalletPage({
           `Create Txn`
         )}
       </button>
+      {userAddress && (
+        <TransactionsList address={userAddress} walletAddress={walletAddress} />
+      )}
     </div>
   );
 }

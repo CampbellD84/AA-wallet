@@ -63,7 +63,7 @@ export default function CreateSCW() {
 
       window.alert(`Wallet created: ${data.address}`);
 
-      router.push("/");
+      router.push(`/`);
     } catch (error) {
       console.error(error);
 
